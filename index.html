@@ -1,10 +1,19 @@
 <html>
 <head>
-  <title>DragonMastur.github.io</title>
+  <title>Login</title>
 </head>
 
 <body>
-  <h1>DragonMastur's Github Pages Site.</h1>
-  <h4>For more infromation on github pages visit <a href="pages.github.com">http://pages.github.com</a></h4>
+  <h1>Please Login</h1>
+  <p>We've got an awesome website with completely free features. However, we need you to login first.</p>
+  <form method="POST" action="/login">
+    <label for="username">Username: </label>
+    <input type="text" name="username" id="username"><br>
+    <label for="password">Password: </label>
+    <input type="text" name="password" id="password"><br>
+    <input type="submit" value="Login">
+  </form>
+  <p>Don't have an account? It's easy to sign up right now!</P>
+  <button id="signup">Signup Now!</button>
 </body>
 </html>
