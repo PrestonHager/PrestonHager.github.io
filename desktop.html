@@ -9,6 +9,10 @@
   function changeFrame(html) {
     frame.srcdoc = html;
   }
+  window.onresize = function() {
+    frame.style.width = "100%";
+    frame.style.height = "100%";
+  }
   function httpGet(theUrl)
   {
     if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
