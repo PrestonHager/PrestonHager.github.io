@@ -14,6 +14,8 @@
     <input type="submit" value="Login">
   </form>
   <p>Don't have an account? It's easy to sign up right now!</P>
-  <button id="signup">Signup Now!</button>
+  <button id="signup" onclick="$('a#signup-link').click();">Signup Now!</button>
+  <a href="/signup" style="display:none;" id="signup-link"></a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>
