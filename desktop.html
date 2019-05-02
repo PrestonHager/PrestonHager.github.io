@@ -10,8 +10,8 @@
     frame.srcdoc = html;
   }
   window.onresize = function() {
-    frame.style.width = "100%";
-    frame.style.height = "100%";
+    frame.style.width = window.width;
+    frame.style.height = window.height;
   }
   function httpGet(theUrl)
   {
