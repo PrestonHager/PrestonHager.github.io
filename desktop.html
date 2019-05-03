@@ -11,26 +11,18 @@
   var frame = document.getElementById("frame");
   var button = document.getElementById("fullscreen-button");
   var buttonDiv = document.getElementById("fullscreen-button-div");
-  var isFullscreen = False;
   function changeFrame(html) {
     frame.srcdoc = html;
   }
   button.onclick = function() {
     buttonDiv.style.display = "none";
-    frame.style.display = "block";
-    isFullscreen = True;
-    documnet.documentElement.requestFullscreen();
+    documnet.documentElement.requestFullscreen().then(function(){
+      frame.style.display = "block";
+    });
   }
   window.onresize = function() {
     frame.style.width = window.width;
     frame.style.height = window.height;
-  }
-  window.onkeypress = function(e) {
-    if (e.keyCode === 27 && isFullscreen) { // Escape
-      frame.style.display = "none";
-      buttonDiv.style.display = "block";
-      isFullscreen = False;
-    }
   }
   function httpGet(theUrl) {
     if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
