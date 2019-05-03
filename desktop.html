@@ -11,23 +11,25 @@
   var frame = document.getElementById("frame");
   var button = document.getElementById("fullscreen-button");
   var buttonDiv = document.getElementById("fullscreen-button-div");
+  var isFullscreen = False;
   function changeFrame(html) {
     frame.srcdoc = html;
   }
   button.onclick = function() {
     buttonDiv.style.display = "none";
     frame.style.display = "block";
-    enterFullscreen(documnet.documentElement);
+    isFullscreen = True;
+    documnet.documentElement.requestFullscreen();
   }
   window.onresize = function() {
     frame.style.width = window.width;
     frame.style.height = window.height;
   }
   window.onkeypress = function(e) {
-    if (e.keyCode === 27) { // Escape
+    if (e.keyCode === 27 && isFullscreen) { // Escape
       frame.style.display = "none";
       buttonDiv.style.display = "block";
-      exitFullscreen();
+      isFullscreen = False;
     }
   }
   function httpGet(theUrl) {
@@ -44,26 +46,6 @@
     }
     xmlhttp.open("GET", theUrl, false);
     xmlhttp.send();    
-  }
-  function enterFullscreen(element) {
-    if (element.mozRequestFullScreen) {
-      element.mozRequestFullScreen();
-    } else if (element.webkitRequestFullscreen) {
-      element.webkitRequestFullscreen();
-    } else if (element.msRequestFullscreen) {
-      element.msRequestFullscreen();
-    } else {
-      element.requestFullscreen();
-    }
-  }
-  function exitFullscreen() {
-    if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    } else {
-      document.exitFullscreen();
-    }
   }
   httpGet("https://raw.githubusercontent.com/zager-xaa55/Cyclica/master/ReactionDE-2.5.html");
   </script>
