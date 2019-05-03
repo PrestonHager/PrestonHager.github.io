@@ -46,23 +46,23 @@
     xmlhttp.send();    
   }
   function enterFullscreen(element) {
-    if (element.requestFullscreen) {
-      element.requestFullscreen();
-    } else if (element.mozRequestFullScreen) {
+    if (element.mozRequestFullScreen) {
       element.mozRequestFullScreen();
     } else if (element.webkitRequestFullscreen) {
       element.webkitRequestFullscreen();
     } else if (element.msRequestFullscreen) {
       element.msRequestFullscreen();
+    } else {
+      element.requestFullscreen();
     }
   }
   function exitFullscreen() {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.mozCancelFullScreen) {
+    if (document.mozCancelFullScreen) {
       document.mozCancelFullScreen();
     } else if (document.webkitExitFullscreen) {
       document.webkitExitFullscreen();
+    } else {
+      document.exitFullscreen();
     }
   }
   httpGet("https://raw.githubusercontent.com/zager-xaa55/Cyclica/master/ReactionDE-2.5.html");
