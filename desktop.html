@@ -3,7 +3,7 @@
   <title>Cyclica Desktop</title>
 <head>
 <body style="margin: 0; padding: 0; border: 0;">
-  <div style="position: relative; width: 100%; height: 100%; margin: 0; padding: 0; border: 0;" id="fullscreen-button-div">
+  <div style="position: relative; margin: 0; padding: 0; border: 0; width: 100%; height: 100%;" id="fullscreen-button-div">
     <button id="fullscreen-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Please Enter Fullscreen for Access to the Desktop</button>
   </div>
   <iframe id="frame" srcdoc="<html><body><h1>Loading.... Please wait.</h1></body></html>" style="display:none; width: 100%; height: 100%; top: 0; left: 0; border: 0; margin: 0; padding: 0;"></iframe>
@@ -15,16 +15,16 @@
     frame.srcdoc = html;
   }
   button.onclick = function() {
+    frame.style.display = "block";
     buttonDiv.style.display = "none";
-    documnet.documentElement.requestFullscreen().then(function(){
-      frame.style.display = "block";
-    });
+    document.documentElement.requestFullscreen();
   }
   window.onresize = function() {
     frame.style.width = window.width;
     frame.style.height = window.height;
   }
-  function httpGet(theUrl) {
+  function httpGet(theUrl)
+  {
     if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
       xmlhttp=new XMLHttpRequest();
     }
