@@ -16,8 +16,8 @@
   }
   button.onclick = function() {
     buttonDiv.style.display = "none";
-    enterFullscreen(documnet.documentElement);
     frame.style.display = "block";
+    enterFullscreen(documnet.documentElement);
   }
   window.onresize = function() {
     frame.style.width = window.width;
@@ -26,8 +26,8 @@
   window.onkeypress = function(e) {
     if (e.keyCode === 27) { // Escape
       frame.style.display = "none";
-      exitFullscreen();
       buttonDiv.style.display = "block";
+      exitFullscreen();
     }
   }
   function httpGet(theUrl) {
