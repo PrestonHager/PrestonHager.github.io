@@ -23,7 +23,7 @@
     }
     xmlhttp.onreadystatechange=function(){
       if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-        changeFrame("<html><head><link rel=\"stylesheet\" src=\"https://codepen.io/Piist300/pen/QPOvxe.css\"></head><body>" + xmlhttp.responseText + "</body></html>");
+        changeFrame("<html><head><link rel=\"stylesheet\" href=\"https://codepen.io/Piist300/pen/QPOvxe.css\"></head><body>" + xmlhttp.responseText + "</body></html>");
       }
     }
     xmlhttp.open("GET", theUrl, false);
