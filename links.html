@@ -1,0 +1,43 @@
+---
+layout: minimal
+title: Links
+permalink: /links/
+---
+
+<div class="center">
+  <div id="user-profile" class="user"></div>
+
+  <h2>Preston's Links</h2>
+  <p style="max-width: 15em; display: inline-block;">Click on a button to follow me on that platform!</p>
+
+  <ul class="media-links">
+    <li>
+      <button onclick="sendTo('instagram://user?username={{ site.instagram_username }}','intent://www.instagram.com/{{ site.instagram_username }}#Intent;package=com.instagram.android;scheme=https;end','https://instagram.com/{{ site.instagram_username }}');">
+        Instagram
+      </button>
+    </li>
+    <li>
+      <button onclick="sendTo('https://tiktok.com/@{{ site.tiktok_username }}','intent://home#Intent;package=com.zhiliaoapp.musically;scheme=snssdk1233;end','https://tiktok.com/@{{ site.tiktok_username }}');">
+        TikTok
+      </button>
+    </li>
+    <li>
+      <button onclick="sendTo('snapchat://add/{{ site.snapchat_username }}','intent://add/{{ site.snapchat_username }}#Intent;scheme=snapchat;package=com.snapchat.android;end;','https://www.snapchat.com/add/{{ site.snapchat_username }}');">
+        Snapchat
+      </button>
+    </li>
+    <li>
+      <button onclick="sendTo(false, false, 'https://github.com/{{ site.github_username }}')">
+        GitHub
+      </button>
+    </li>
+    <li>
+      <button onclick="sendTo(false, false, 'https://stackoverflow.com/users/{{ site.stackoverflow_id }}')">
+        Stack Overflow
+      </button>
+    </li>
+  </ul>
+</div>
+
+
+<script src="/assets/links.js"></script>

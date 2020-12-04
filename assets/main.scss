@@ -1,0 +1,16 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+/* Override the theme colors */
+
+$background-color: #FFFAFA;
+$brand-color:      #3587EA;
+
+$grey-color:       #363636;
+
+/* Import the media styles */
+@import "media";
+
+/* Import the main theme */
+@import "minima";
