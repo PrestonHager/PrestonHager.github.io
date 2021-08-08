@@ -5,16 +5,31 @@ ul.media-links {
   margin: 0;
   li {
     padding: 1em;
+    button {
+      background-color: $brand-color;
+      color: #FFF;
+      font-size: 1.75em;
+      border: 2px solid darken($brand-color, 10%);
+      border-radius: 1em;
+      padding: 0.4em 1em;
+      min-width: 10em;
+      cursor: pointer;
+    }
   }
-  li button {
-    background-color: $brand-color;
-    color: #FFF;
-    font-size: 1.75em;
-    border: 2px solid darken($brand-color, 10%);
-    border-radius: 1em;
-    padding: 0.4em 1em;
-    min-width: 10em;
-    cursor: pointer;
+}
+
+div.photo-grid {
+  width: auto;
+  margin: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & > * {
+    flex: 1 1 15em;
+    padding: 0.5em;
+    display: inline-block;
   }
 }
 
