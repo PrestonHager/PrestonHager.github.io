@@ -22,6 +22,10 @@ I like to make tools or things that automate other things.
 I've also worked with Raspberry Pi's, Arduinos, and other engineering
 things to create random projects.
 
+Finally, I am also a photographer.
+You can find more about my photography on the [Photography][4] page.
+
 [1]: https://github.com/PrestonHager/Startaste
 [2]: https://github.com/PrestonHager/SoundBytes
 [3]: https://github.com/PrestonHager/
+[4]: /photography
