@@ -18,7 +18,7 @@ let PHOTOS = [
 // Execute when the document is loaded
 $(document).ready((e) => {
   let photoGrid = $("#photo-grid");
-  let networkSpeed = navigator.connection.downlink;
+  let networkSpeed = navigator.connection.downlink | 0;
   let imageSize;
   switch (true) {
     case (networkSpeed < 1):
