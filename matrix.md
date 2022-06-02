@@ -1,7 +1,7 @@
 --
 layout: json
 title: Matrix
-permalink: /.well-known/matrix/client
+permalink: /matrix/
 ---
 
 {"m.homeserver": {"base_url": "https:/matrix.prestonhager.xyz"}}
