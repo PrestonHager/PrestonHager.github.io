@@ -11,14 +11,16 @@
 let PHOTOS = [
   "IMG_2956",
   "IMG_3014",
-  "IMG_2663"
+  "IMG_2663",
+  "IMG_4394",
 ];
 // === End of Definitions === //
 
 // Execute when the document is loaded
 $(document).ready((e) => {
   let photoGrid = $("#photo-grid");
-  let networkSpeed = navigator.connection.downlink | 0;
+  // Get the network speed, if it isn't defined then defaut to 0.
+  let networkSpeed = ((navigator | 0).connection | 0).downlink | 0;
   let imageSize;
   switch (true) {
     case (networkSpeed < 1):
@@ -41,4 +43,4 @@ $(document).ready((e) => {
     );
     photoGrid.append(imageElement);
   }
-})
+});
