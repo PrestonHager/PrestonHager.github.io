@@ -19,11 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Preston Hager
-email: me@prestonhager.xyz
+email: me@prestonhager.com
 description: >- # this means to ignore newlines until "baseurl:"
   A developer's journey in technology.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://prestonhager.xyz" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://prestonhager.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Analytics and Social Media
 google_analytics: G-HBEJFR5XM3
