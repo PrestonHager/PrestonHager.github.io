@@ -23,7 +23,7 @@ email: me@prestonhager.com
 description: >- # this means to ignore newlines until "baseurl:"
   A developer's journey in technology.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://prestonhager.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.prestonhager.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Analytics and Social Media
 google_analytics: G-HBEJFR5XM3
