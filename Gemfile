@@ -17,7 +17,7 @@ gem "github-pages", group: :jekyll_plugins
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
 end
-gem 'faraday', '0.17.3'
+gem 'faraday', '2.14.1'
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
